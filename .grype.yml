@@ -1,0 +1,13 @@
+ignore:
+  # ml-dsa  0.0.4
+  - vulnerability: GHSA-hcp2-x6j4-29j7
+  # ml-dsa  0.0.4
+  - vulnerability: GHSA-5x2r-hc65-25f9
+  # pgp     0.16.0
+  - vulnerability: GHSA-7587-4wv6-m68m
+  # pgp     0.16.0
+  - vulnerability: GHSA-8h58-w33p-wq3g
+  # ml-dsa  0.0.4
+  - vulnerability: GHSA-h37v-hp6w-2pp8
+  # pgp     0.16.0
+  - vulnerability: GHSA-c7ph-f7jm-xv4w

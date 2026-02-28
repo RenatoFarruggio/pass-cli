@@ -16,21 +16,15 @@ If you still want to use the app, you will need to:
 
 It's possible that your computer has a restricted script execution policy set, either by you or via a company Device Management System.
 
-In order to check if that's the case for the execution of the script, you should open `Powershell` in Administrator mode, and run:
+In order to run the installation script without changing your system policy, open `Powershell` as a regular user (not Administrator), move to the folder that contains `install.ps1`, and run:
 
 ```powershell
-Get-ExecutionPolicy
+PowerShell -ExecutionPolicy Bypass -File install.ps1
 ```
 
-There you will be able to check the current execution policy. In order to allow the installation of the script, you can run this command:
+This command applies the bypass only for this script execution, and does not change your current execution policy.
 
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
-```
-
-It will only allow to run scripts that are signed, and the provided `install.ps1` is properly signed, so your computer should be able to run it without any further restrictions.
-
-Once you have successfully installed it, you can set back the execution policy to its previous value by running back again the `Set-ExecutionPolicy` command and passing the original value you got by running `Get-ExecutionPolicy`. 
+Once you have successfully installed it, you can delete `install.ps1`.
 
 ## SSH Agent troubleshooting
 
